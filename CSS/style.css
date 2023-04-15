@@ -323,7 +323,7 @@ search-nav > form > input:focus{
 .search-box{
     /* position: relative;*/
      width: auto;
-     height: 40px;
+     height: 60px;
      /* margin: 0 auto; */
      margin-top: 10rem;
      background: #fff;
@@ -334,7 +334,7 @@ search-nav > form > input:focus{
    .search-box1{
        /* position: relative;*/
         width: auto;
-        height: 70px;
+        height: 300px;
          margin: 0 auto; 
         
         background: #fff;
@@ -381,7 +381,7 @@ search-nav > form > input:focus{
    .search-box .pname{
    
        position: absolute;
-       left: 5%;
+        left: 5%; 
        margin-top: 10px;
        color: #000;
        font-size: 20px;
@@ -390,7 +390,7 @@ search-nav > form > input:focus{
    }
    .search-box .price{
        position: absolute;
-       left: 30%;
+       left: 60%;
        margin-top: 10px;
        color: #000;
        font-size: 20px;
@@ -399,7 +399,8 @@ search-nav > form > input:focus{
    }
    .search-box .mrp{
        position: absolute;
-       left: 50%;
+       
+       left: 40%;
        margin-top: 10px;
        color: #000;
        font-size: 20px;
@@ -408,7 +409,7 @@ search-nav > form > input:focus{
    }
    .search-box .image{
        position: absolute;
-       left: 70%;
+       left: 78%;
        margin-top: 10px;
        color: #000;
        font-size: 20px;
@@ -420,27 +421,28 @@ search-nav > form > input:focus{
    
        position: absolute;
        left: 5%;
-       margin-top: 10px;
+       margin-top: 100px;
        color: #000;
-       font-size: 20px;
+       font-size: 25px;
        font-weight: 500;
        text-decoration: none;
    }
    .price{
        position: absolute;
-       left: 30%;
-       margin-top: 10px;
+       left: 60%;
+       margin-top: 100px;
        color: #000;
-       font-size: 17px;
+       font-size: 30px;
        font-weight: 500;
        text-decoration: none;
    }
    .mrp{
        position: absolute;
-       left: 50%;
-       margin-top: 10px;
+       
+       left: 40%;
+       margin-top: 100px;
        color: #000;
-       font-size: 17px;
+       font-size: 35px;
        font-weight: 500;
        text-decoration: none;
    }
@@ -448,19 +450,19 @@ search-nav > form > input:focus{
    
    .image{
        position: absolute;
-       left: 70%;
-       margin-top: 10px;
+       left: 75%;
+       margin-top: 30px;
        color: #000;
-       font-size: 17px;
+       font-size: 50px;
        font-weight: 500;
        text-decoration: none;
    }
    
    .image .image-img{
        position: absolute;
-       left: 70%;
-       width: 40px;
-       height: 40px;
+       left: 65%;
+       width: 60px;
+       height: 70px;
        object-fit: cover;
        
        color: #000;
@@ -468,8 +470,8 @@ search-nav > form > input:focus{
    
    }
    .image-img >img{
-       width: 40px;
-       height: 40px;
+       width: 200px;
+       height: 220px;
        object-fit: cover;
    }
    

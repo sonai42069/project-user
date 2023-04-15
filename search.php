@@ -4,13 +4,14 @@
     $search = mysqli_real_escape_string($con, $_POST['search']);
     if(!empty($search)){
       //  $LIST ="SELECT * FROM product WHERE name LIKE '{$search}%' ";
-        $sql = mysqli_query($con, "SELECT * FROM product WHERE name LIKE '{$search}%' ");
+        $sql = mysqli_query($con, "SELECT * FROM product WHERE name LIKE '%{$search}%' ");
         if(mysqli_num_rows($sql) > 0){?>
 			<div class="search-box">
 			
 				<div class="pname">Product Name</div>
-				<div class="price">Price</div>
 				<div class="mrp">MRP</div>
+				<div class="price">Price</div>
+				
 				<div class="image">Image</div>
 			
 			</div>
@@ -19,11 +20,12 @@
 			?>
        <div class="search-box1">
 			<div class="pname"><?php echo $row['name'] ?></div>
+			<div class="mrp"><?php echo $row['mrp'] ?></div>
 			<div class="price"><?php echo $row['price'] ?></div>
-			<div class="mrp"><?php echo $row['mrp'] ?></div>   
+			   
        		 <div class="image">
 				<div class="image-img">
-       			 <img src="../admin/images/picture/<?php echo $row['image']?>">
+       			 <img src="../college-admin/admin/images/picture/<?php echo $row['image']?>">
         		</div>
 			</div>
 		</div>

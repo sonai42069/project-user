@@ -17,7 +17,7 @@
 
 
 <header class="header">
-<a href="#" class="logo"><i class="fa-regular fa-basket-shopping"></i> NourishNow </a>
+<a href="#" class="logo"><i class="fa-duotone fa-cart-shopping-fast" style="--fa-primary-color: #e06500; --fa-secondary-color: #ff8929; --fa-secondary-opacity: 0.8;"></i> NourishNow </a>
 <nav class="navbar">
     <a href="top1.php">home</a>
     <a href="#products">products</a>
