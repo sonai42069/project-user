@@ -14,7 +14,7 @@ continueBtn.onclick = ()=>{
           if(xhr.status === 200){
               let data = xhr.response;
               if(data === "success"){
-                location.href="top1.php";
+                location.href="verify_account/verify_otp.php";
               }else{
                 errorText.style.display = "block";
                 errorText.textContent = data;

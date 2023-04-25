@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 15, 2023 at 08:27 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.0.28
+-- Generation Time: Apr 25, 2023 at 07:19 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.0.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -82,6 +82,15 @@ CREATE TABLE `contact_us` (
   `comment` text NOT NULL,
   `added_on` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `contact_us`
+--
+
+INSERT INTO `contact_us` (`id`, `name`, `email`, `mobile`, `comment`, `added_on`) VALUES
+(5, 'vfchyjbn', 'ufrcjvhfcbmg@gmail.com', '8116739131', 'kjbhg jdhnbdh,vgj', '0000-00-00 00:00:00'),
+(6, 'vjyvrtvyvg', 'jhhg@gmail.com', '8116739131', 'htrdfghuh7t6rtf', '0000-00-00 00:00:00'),
+(7, 'htrdcvhuyfg', 'hgfhg@gmail.com', '8529637410', 'kjuytfdcvjuytfgvb', '2023-04-21 21:06:13');
 
 -- --------------------------------------------------------
 
@@ -173,6 +182,19 @@ INSERT INTO `order_status` (`id`, `name`) VALUES
 (3, 'Shipped'),
 (4, 'Canceled'),
 (5, 'Complete');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `otp_expiry`
+--
+
+CREATE TABLE `otp_expiry` (
+  `id` int(11) NOT NULL,
+  `otp` varchar(10) NOT NULL,
+  `is_expired` int(11) NOT NULL,
+  `create_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -305,16 +327,20 @@ CREATE TABLE `users` (
   `email` varchar(50) NOT NULL,
   `mobile` varchar(15) NOT NULL,
   `image` varchar(25) NOT NULL,
-  `added_on` datetime NOT NULL
+  `added_on` datetime NOT NULL,
+  `otp` varchar(11) NOT NULL,
+  `status` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `fname`, `lname`, `password`, `email`, `mobile`, `image`, `added_on`) VALUES
-(744926538, 'jihfgvghrvt', 'nhegfcvebhjhg', '21232f297a57a5a743894a0e4a801fc3', 'sonai@gmail.com', '8116739132', '1680550887Adobe Scan Jul ', '0000-00-00 00:00:00'),
-(752897876, 'jihfgvghrvt', 'nhegfcvebhjhg', '21232f297a57a5a743894a0e4a801fc3', 'admin213@gmail.com', '8116739131', '1680550776Adobe Scan Jul ', '0000-00-00 00:00:00');
+INSERT INTO `users` (`id`, `fname`, `lname`, `password`, `email`, `mobile`, `image`, `added_on`, `otp`, `status`) VALUES
+(475958263, 'sonai', 'jhg', '202cb962ac59075b964b07152d234b70', 'hsoumitra42069@gmail.com', '8525521562', '1682243456IMG-20220926-WA', '0000-00-00 00:00:00', '593645', ''),
+(744926538, 'jihfgvghrvt', 'nhegfcvebhjhg', '21232f297a57a5a743894a0e4a801fc3', 'sonai@gmail.com', '8116739132', '1680550887Adobe Scan Jul ', '0000-00-00 00:00:00', '28258', ''),
+(752897876, 'jihfgvghrvt', 'nhegfcvebhjhg', '21232f297a57a5a743894a0e4a801fc3', 'admin213@gmail.com', '8116739131', '1680550776Adobe Scan Jul ', '0000-00-00 00:00:00', '', ''),
+(1511699739, 'gfdhbgfcvbn', 'iuytfdsz', 'c11e1dea283e48a48987b0f03b69a48b', 'uyfg@gmail.com', '8116739138', '1682105027IMG-20221002-WA', '0000-00-00 00:00:00', '', '');
 
 -- --------------------------------------------------------
 
@@ -434,7 +460,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `contact_us`
 --
 ALTER TABLE `contact_us`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `coupon_master`

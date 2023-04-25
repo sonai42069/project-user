@@ -9,7 +9,9 @@
             $row = mysqli_fetch_assoc($sql);
             $user_pass = md5($password);
             $enc_pass = $row['password'];
+            $status = $row['status'];
             if($user_pass === $enc_pass){
+                if($status == "active"){
                 $_SESSION['id'] = $row['id'];
                 $_SESSION['fname'] = $row['fname'];
                 $_SESSION['lname'] = $row['lname'];
@@ -17,6 +19,10 @@
                 $_SESSION['email'] = $row['email'];
                 $_SESSION['image'] = $row['image'];
                     echo "success";
+                }else{
+                    echo "Your account is not active!.
+                    Please verify your account.";
+                }
             }else{
                 echo "Password is Incorrect!";
             }

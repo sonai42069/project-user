@@ -20,7 +20,9 @@
           <input type="submit" name="submit" value="submit" >
         </div>
       </form>
-      <div class="link">Don't have an account ?<a href="signup.php"> Signup now</a></div>
+      <div class="link">If you not verify your account ?<a href="verify_account/forverify.php" style="text-decoration : none"> Click Here</a></div>
+      <div class="link">If you forgot your password ?<a href="resetpass/password_recovery.php" style="text-decoration : none"> Click Here</a></div>
+      <div class="link">Don't have an account ?<a href="signup.php" style="text-decoration : none"> Signup now</a></div>
     </section>
   </div>
 

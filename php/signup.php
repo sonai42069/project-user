@@ -43,8 +43,8 @@
                                     if(move_uploaded_file($tmp_name,"images/".$new_img_name)){
                                         $ran_id = rand(time(), 100000000);
                                         $encrypt_pass = md5($password);
-                                        $insert_query = mysqli_query($con, "INSERT INTO users (id, fname, lname, mobile, email, password, image)
-                                        VALUES ({$ran_id}, '{$fname}','{$lname}','{$number}', '{$email}', '{$encrypt_pass}', '{$new_img_name}')");
+                                        $insert_query = mysqli_query($con, "INSERT INTO users (id, fname, lname, mobile, email, password, image, status)
+                                        VALUES ({$ran_id}, '{$fname}','{$lname}','{$number}', '{$email}', '{$encrypt_pass}', '{$new_img_name}', 'inactive')");
                                         if($insert_query){
                                             $select_sql2 = mysqli_query($con, "SELECT * FROM users WHERE email = '{$email}'");
                                             if(mysqli_num_rows($select_sql2) > 0){

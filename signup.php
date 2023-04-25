@@ -41,7 +41,7 @@
           <input type="submit" name="submit" value="submit" >
         </div>
       </form>
-      <div class="link">Already signed up? <a href="login.php">Login now</a></div>
+      <div class="link">Already signed up? <a href="login.php" style="text-decoration : none">Login now</a></div>
     </section>
   </div>
 
